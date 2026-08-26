@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { useState } from "react";
 
 const services = [
   ["🔑", "Dorabianie kluczy", "Precyzyjnie wykonany zapasowy klucz do Twojego auta."],
@@ -35,9 +35,9 @@ function BrandLogo({ name, icon, color }: { name: string; icon: string; color: s
 
 export default function Home() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
-  const [sent, setSent] = useState(false);
+ 
   const [callNotice, setCallNotice] = useState(false);
-  function submit(e: FormEvent<HTMLFormElement>) { e.preventDefault(); setSent(true); }
+  
   function callNow() { setCallNotice(true); }
 
   return <main>
@@ -72,7 +72,7 @@ export default function Home() {
 
     <section id="faq" className="faq-section"><div className="container faq-layout"><div><p className="eyebrow red">MASZ PYTANIE?</p><h2>Najczęściej zadawane <em>pytania</em></h2><p>Nie znalazłeś odpowiedzi? Zadzwoń — chętnie doradzimy.</p><a className="text-link" href="tel:+48509737120">☎ Porozmawiajmy <b>→</b></a></div><div className="faq-list">{faqs.map(([q, a], i) => <article className={openFaq === i ? "faq-item active" : "faq-item"} key={q}><button onClick={() => setOpenFaq(openFaq === i ? null : i)} aria-expanded={openFaq === i}>{q}<span>{openFaq === i ? "−" : "+"}</span></button>{openFaq === i && <p>{a}</p>}</article>)}</div></div></section>
 
-    <section id="kontakt" className="contact-section"><div className="container contact-grid"><div className="map-card"><iframe title="Mapa AutoKey Expert — Jędrzejów, ul. Krzywa 30A" src="https://www.google.com/maps?q=ul.%20Krzywa%2030A%2C%20J%C4%99drzej%C3%B3w&output=embed" loading="lazy" /><a className="map-overlay" href="https://www.google.com/maps/search/?api=1&query=ul.+Krzywa+30A%2C+J%C4%99drzej%C3%B3w" target="_blank" rel="noreferrer">⌖ Otwórz w Google Maps</a></div><div className="contact-form"><p className="eyebrow red">BEZPŁATNA WYCENA</p><h2>Powiedz, w czym <em>pomóc</em></h2><p className="contact-details"><a href="tel:+485097373120">☎ 509 737 3120</a><span>ul. Krzywa 30A, Jędrzejów, świętokrzyskie</span></p>{sent ? <div className="success"><strong>Dziękujemy!</strong><p>Wersja demonstracyjna formularza. Po podłączeniu skrzynki wiadomość trafi bezpośrednio do AutoKey Expert.</p></div> : <form onSubmit={submit}><label>Imię<input required name="name" placeholder="Jak mamy się do Ciebie zwracać?" /></label><label>Telefon<input required name="phone" type="tel" placeholder="Twój numer telefonu" /></label><label>Marka auta<input name="brand" placeholder="np. Audi A4, 2018" /></label><label>Problem<textarea required name="message" placeholder="Opisz krótko problem z kluczykiem..." rows={4} /></label><button className="button button-red" type="submit">Wyślij zapytanie <b>→</b></button></form>}</div></div></section>
+    <section id="kontakt" className="contact-section"><div className="container contact-grid"><div className="map-card"><iframe title="Mapa AutoKey Expert — Jędrzejów, ul. Krzywa 30A" src="https://www.google.com/maps?q=ul.%20Krzywa%2030A%2C%20J%C4%99drzej%C3%B3w&output=embed" loading="lazy" /><a className="map-overlay" href="https://www.google.com/maps/search/?api=1&query=ul.+Krzywa+30A%2C+J%C4%99drzej%C3%B3w" target="_blank" rel="noreferrer">⌖ Otwórz w Google Maps</a></div><div className="contact-form"><p className="eyebrow red">BEZPŁATNA WYCENA</p><h2>Powiedz, w czym <em>pomóc</em></h2><p className="contact-details"><a href="tel:+485097373120">☎ 509 737 3120</a><span>ul. Krzywa 30A, Jędrzejów, świętokrzyskie</span></p> <form action="https://formspree.io/f/mrpzdjwn" method="POST"><label>Imię<input required name="name" placeholder="Jak mamy się do Ciebie zwracać?" /></label><label>Telefon<input required name="phone" type="tel" placeholder="Twój numer telefonu" /></label><label>Marka auta<input name="brand" placeholder="np. Audi A4, 2018" /></label><label>Problem<textarea required name="message" placeholder="Opisz krótko problem z kluczykiem..." rows={4} /></label><button className="button button-red" type="submit">Wyślij zapytanie <b>→</b></button></form></div></div></section>
 
     <footer><div className="container footer-grid"><a className="logo" href="#start"><span>AK</span><strong>AUTOKEY<br />EXPERT</strong></a><div><p>Kontakt</p><a href="tel:+485097373120">509 737 3120</a><a href="mailto:kontakt@autokeyexpert.pl">kontakt@autokeyexpert.pl</a></div><div><p>Godziny</p><span>Pon–Pt: 9:00–17:00</span><span>Sob: po umówieniu</span></div><div><p>Obszar działania</p><span>Jędrzejów i okolice</span><a href="#">Polityka prywatności</a></div></div><div className="footer-bottom container">© {new Date().getFullYear()} AutoKey Expert. Wszystkie prawa zastrzeżone.<span>Facebook &nbsp; Instagram</span></div></footer>
   </main>;
