@@ -52,8 +52,8 @@ export default function Home() {
       <div className="hero-shade" />
       <div className="hero-content container">
         <p className="eyebrow">SPECJALIŚCI OD KLUCZY SAMOCHODOWYCH</p>
-        <h1>Programowanie i dorabianie <em>kluczy samochodowych</em></h1>
-        <p className="hero-lead">Drugi klucz do auta <i>•</i> Programowanie immobilizerów <i>•</i> Naprawa pilotów <i>•</i> Diagnostyka</p>
+        <h1>Potrzebujesz kluczyka do <em>samochodu?</em></h1>
+<p className="hero-lead">Dorabianie kluczy • Programowanie • Naprawa pilotów • Drugi klucz do auta</p>
         <div className="actions"><a className="button button-red" href="#kontakt">Bezpłatna wycena <b>→</b></a><button className="button button-dark" type="button" onClick={callNow}>☎ Zadzwoń teraz</button></div>{callNotice && <p className="call-notice" role="status">Zadzwoń pod numer: <strong>509737120</strong></p>}
       </div>
       <aside className="hero-card"><p>DOŚWIADCZENIE I TECHNOLOGIA</p><ul><li>✓ Ponad 50 marek</li><li>✓ Programowanie Smart Key</li><li>✓ Immobilizery</li><li>✓ Elektronika kluczy</li></ul><a href="tel:+48509737120">☎ 509 737 120</a></aside>
