@@ -173,7 +173,7 @@ export default function PolitykaPrywatnosciPage() {
           wpływających na użytkownika.
         </p>
 
-        <h2>14. Pliki cookies i narzędzia analityczne</h2>
+        <h2 id="cookies">14. Pliki cookies i narzędzia analityczne</h2>
         <p>
           Strona Auto Key Expert nie wykorzystuje własnych narzędzi
           analitycznych ani reklamowych, takich jak Google Analytics,

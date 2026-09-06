@@ -87,6 +87,6 @@ export default function Home() {
 </p>
 <button className="button button-red" type="submit">Wyślij zapytanie <b>→</b></button></form></div></div></section>
 
-    <footer><div className="container footer-grid"><a className="logo" href="#start"><span>AK</span><strong>AUTOKEY<br />EXPERT</strong></a><div><p>Kontakt</p><a href="tel:+48509737120">509 737 120</a><a href="mailto:kontakt@autokeyexpert.pl">kontakt@autokeyexpert.pl</a></div><div><p>Godziny</p><span>Pon–Pt: 9:00–17:00</span><span>Sob: po umówieniu</span></div><div><p>Obszar działania</p><span>Jędrzejów i okolice</span><a href="/polityka-prywatnosci">Polityka prywatności</a></div></div><div className="footer-bottom container">© {new Date().getFullYear()} AutoKey Expert. Wszystkie prawa zastrzeżone.<span>Facebook &nbsp; Instagram</span></div></footer>
+    <footer><div className="container footer-grid"><a className="logo" href="#start"><span>AK</span><strong>AUTOKEY<br />EXPERT</strong></a><div><p>Kontakt</p><a href="tel:+48509737120">509 737 120</a><a href="mailto:kontakt@autokeyexpert.pl">kontakt@autokeyexpert.pl</a></div><div><p>Godziny</p><span>Pon–Pt: 9:00–17:00</span><span>Sob: po umówieniu</span></div><div><p>Obszar działania</p><span>Jędrzejów i okolice</span><a href="/polityka-prywatnosci">Polityka prywatności</a><a href="/polityka-prywatnosci#cookies">Cookies</a></div></div><div className="footer-bottom container">© {new Date().getFullYear()} AutoKey Expert. Wszystkie prawa zastrzeżone.<span>Facebook &nbsp; Instagram</span></div></footer>
   </main>;
 }
