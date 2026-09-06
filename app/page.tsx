@@ -8,7 +8,7 @@ const services = [
   ["🛠", "Naprawa pilotów", "Naprawa obudów, przycisków, elektroniki i baterii."],
   ["🚗", "Drugi klucz do auta", "Zapas, który daje spokój przed utratą jedynego klucza."],
   ["🔒", "Immobilizery", "Diagnostyka, programowanie i rozwiązania po utracie kluczy."],
-  ["📞", "Konsultacja", "Krótko opisz problem — podpowiemy najlepsze rozwiązanie."],
+ ["📞", "Konsultacja", "Bezpłatna — podaj markę, model i rocznik samochodu oraz opisz, czego potrzebujesz. Sprawdzimy możliwość wykonania usługi i przedstawimy orientacyjną cenę."],
 ];
 
 const brands = [
